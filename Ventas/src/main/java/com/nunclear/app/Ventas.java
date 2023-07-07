@@ -22,4 +22,6 @@ public class Ventas {
         lg.setVisible(true);
     }
     
+    
+    
 }

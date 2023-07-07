@@ -1,5 +1,5 @@
 
-package com.nunclear.app.dao;
+package com.nunclear.app.gui;
 
 public class Combo {
     private int id;

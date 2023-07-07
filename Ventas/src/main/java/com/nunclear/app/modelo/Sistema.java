@@ -8,8 +8,8 @@ package com.nunclear.app.modelo;
 import com.nunclear.app.conexion.ConnS;
 import com.nunclear.app.dao.Cliente;
 import com.nunclear.app.dao.ClienteDao;
-import com.nunclear.app.dao.Combo;
-import com.nunclear.app.dao.Config;
+import com.nunclear.app.gui.Combo;
+import com.nunclear.app.gui.Config;
 import com.nunclear.app.dao.Detalle;
 import com.nunclear.app.dao.Eventos;
 import com.nunclear.app.dao.LoginDAO;
@@ -591,7 +591,7 @@ public final class Sistema extends javax.swing.JFrame {
         btnGenerarVenta.setBackground(new java.awt.Color(102, 102, 102));
         btnGenerarVenta.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnGenerarVenta.setForeground(new java.awt.Color(255, 255, 255));
-        btnGenerarVenta.setText("IMPRIMIR");
+        btnGenerarVenta.setText("venta");
         btnGenerarVenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGenerarVentaActionPerformed(evt);
@@ -611,10 +611,9 @@ public final class Sistema extends javax.swing.JFrame {
         jPanel2.add(txtIdCV, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 375, -1, -1));
         jPanel2.add(txtIdPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(678, 126, -1, -1));
 
-        btnGraficar.setBackground(new java.awt.Color(102, 102, 102));
+        btnGraficar.setBackground(new java.awt.Color(153, 153, 153));
         btnGraficar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnGraficar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGraficar.setText("REPORTE");
         btnGraficar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGraficarActionPerformed(evt);
@@ -630,7 +629,7 @@ public final class Sistema extends javax.swing.JFrame {
         btnRepPost.setBackground(new java.awt.Color(51, 51, 51));
         btnRepPost.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnRepPost.setForeground(new java.awt.Color(255, 255, 255));
-        btnRepPost.setText("Factura Prueba");
+        btnRepPost.setText("Reporte");
         btnRepPost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRepPostActionPerformed(evt);
@@ -1817,8 +1816,9 @@ public final class Sistema extends javax.swing.JFrame {
                     txtNombreClienteventa.setText("" + cl.getNombre());
                     txtIdCV.setText("" + cl.getId());
                 } else {
-                    txtRucVenta.setText("");
-                    JOptionPane.showMessageDialog(null, "El cliente no existe");
+                    nuevocliente nuevoCliente = new nuevocliente(); // Crea una instancia del JFrame NuevoCliente
+                    nuevoCliente.setLocationRelativeTo(null); // Centra la ventana en la pantalla
+                    nuevoCliente.setVisible(true); // Muestra el JFrame NuevoCliente
                 }
             }
         }

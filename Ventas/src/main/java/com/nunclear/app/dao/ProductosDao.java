@@ -1,6 +1,7 @@
 
 package com.nunclear.app.dao;
 
+import com.nunclear.app.gui.Config;
 import com.nunclear.app.conexion.ConnS;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
