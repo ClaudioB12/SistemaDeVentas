@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="93409569-5092-4f0b-8130-85f485559979">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select p.nombre, d.precio,  v.* 
+from ventas v, productos p, detalle d
+where v.cliente=p.nombre 
+and v.cliente=d.precio;]]>
+	</queryString>
+	<field name="nombre" class="java.lang.Object"/>
+	<field name="precio" class="java.lang.Object"/>
+	<field name="id" class="java.lang.Object"/>
+	<field name="cliente" class="java.lang.Object"/>
+	<field name="vendedor" class="java.lang.Object"/>
+	<field name="total" class="java.lang.Object"/>
+	<field name="fecha" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="138" y="20" width="258" height="36" uuid="365a62b4-485e-473c-8f1a-611b5d77f78b"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Factura Prueba]]></text>
+			</staticText>
+			<image>
+				<reportElement x="7" y="5" width="96" height="76" uuid="f8a0815c-d499-4635-8652-93bf2772b91a"/>
+				<imageExpression><![CDATA["D:\\UPeU-2023-1\\ProgramaciónOrientadaAObjetos\\SistemaDeVentas\\Ventas\\jasper\\icon_company_logo_01.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="34" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<line>
+				<reportElement x="12" y="5" width="479" height="1" uuid="46f88a64-5cfb-4746-9670-088a8a666b9b"/>
+			</line>
+			<line>
+				<reportElement x="12" y="34" width="479" height="1" uuid="84956dc3-4b99-4b6b-a02a-93fc8c222c73"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="12" y="42" width="479" height="1" uuid="92fe7759-123f-4e1d-87d8-d376f3de11b2"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
