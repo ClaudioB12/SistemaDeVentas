@@ -13,8 +13,8 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         this.setLocationRelativeTo(null);
-        txtCorreo.setText("angel@gmail.com");
-        txtPass.setText("admin");
+        txtCorreo.setText("");
+        txtPass.setText("");
     }
     
     static void encriptado(StringBuilder cont, int[] clave) {

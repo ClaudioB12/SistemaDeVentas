@@ -50,6 +50,12 @@
 				<reportElement x="448" y="19" width="100" height="20" uuid="ba90daa0-80ec-49be-bb7a-9f24855aa63f"/>
 				<text><![CDATA[direccion]]></text>
 			</staticText>
+			<line>
+				<reportElement x="6" y="5" width="542" height="1" uuid="036e14f6-5f97-4236-888a-85cb3c1f02a6"/>
+			</line>
+			<line>
+				<reportElement x="6" y="50" width="542" height="1" uuid="2ab2b8fa-55f5-4931-8566-07da900bc016"/>
+			</line>
 		</band>
 	</columnHeader>
 	<detail>
@@ -74,6 +80,9 @@
 				<reportElement x="448" y="28" width="100" height="20" uuid="5e9b1765-0d80-4708-86de-e4c01bbc1d44"/>
 				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
 			</textField>
+			<line>
+				<reportElement x="6" y="64" width="542" height="1" uuid="1d48d511-e993-4d36-aedf-eb3234d857ff"/>
+			</line>
 		</band>
 	</detail>
 	<columnFooter>

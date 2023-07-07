@@ -198,6 +198,7 @@ public final class Sistema extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         btnNuevaVenta = new javax.swing.JButton();
         btnClientes = new javax.swing.JButton();
@@ -329,6 +330,11 @@ public final class Sistema extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("C.C.A");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 150, 80));
 
         jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -1446,11 +1452,7 @@ public final class Sistema extends javax.swing.JFrame {
             encriptado(strPass, clave);
             String passEncriptado = strPass.toString();
 
-            StringBuilder strNom = new StringBuilder(nom);
-            encriptado(strNom, clave);
-            String nomEncriptado = strNom.toString();
-
-            lg.setNombre(nomEncriptado);
+            lg.setNombre(nom);
             lg.setCorreo(correoEncriptado);
             lg.setPass(passEncriptado);
             lg.setRol(rol);
@@ -2047,6 +2049,7 @@ public final class Sistema extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbxRol;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
